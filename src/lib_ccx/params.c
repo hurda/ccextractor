@@ -170,7 +170,7 @@ void set_output_format (struct ccx_s_options *opt, const char *format)
 
 	if (opt->send_to_srv && strcmp(format, "bin")!=0)
 	{
-		mprint("Output format is changed to bin\n");
+		mprint ("Output format is changed to bin\n");
 		format = "bin";
 	}
 
@@ -241,7 +241,7 @@ void set_input_format (struct ccx_s_options *opt, const char *format)
 {
 	if (opt->input_source == CCX_DS_TCP && strcmp(format, "bin")!=0)
 	{
-		mprint("Input format is changed to bin\n");
+		mprint ("Input format is changed to bin\n");
 		format = "bin";
 	}
 
@@ -323,20 +323,20 @@ void print_usage (void)
 	mprint ("Network support:\n");
 	mprint ("            -udp port: Read the input via UDP (listening in the specified port)\n");
 	mprint ("                       instead of reading a file.\n\n");
-	mprint ("            -udp [host:]port: Read the input via UDP (listening in the specified\n");
-	mprint ("                              port) instead of reading a file. Host can be a\n");
-	mprint ("                              hostname or IPv4 address. If host is not specified\n");
-	mprint ("                              then listens on the local host.\n\n");
-	mprint ("            -sendto host[:port]: Sends data in BIN format to the server\n");
-	mprint ("                                 according to the CCExtractor's protocol over\n");
-	mprint ("                                 TCP. For IPv6 use [address]:port\n");
+	mprint ("     -udp [host:]port: Read the input via UDP (listening in the specified\n");
+	mprint ("                       port) instead of reading a file. Host can be a\n");
+	mprint ("                       hostname or IPv4 address. If host is not specified\n");
+	mprint ("                       then listens on the local host.\n\n");
+	mprint ("  -sendto host[:port]: Sends data in BIN format to the server\n");
+	mprint ("                       according to the CCExtractor's protocol over\n");
+	mprint ("                       TCP. For IPv6 use [address]:port\n");
 	mprint ("            -tcp port: Reads the input data in BIN format according to\n");
-	mprint ("                        CCExtractor's protocol, listening specified port on the\n");
-	mprint ("                        local host\n");
-	mprint ("            -tcppassword password: Sets server password for new connections to\n");
-	mprint ("                                   tcp server\n");
-	mprint ("            -tcpdesc description: Sends to the server short description about\n");
-	mprint ("                                  captions e.g. channel name or file name\n");
+	mprint ("                       CCExtractor's protocol, listening specified port on the\n");
+	mprint ("                       local host\n");
+	mprint ("-tcppassword password: Sets server password for new connections to\n");
+	mprint ("                       tcp server\n");
+	mprint (" -tcpdesc description: Sends to the server short description about\n");
+	mprint ("                       captions e.g. channel name or file name\n");
 	mprint ("Options that affect what will be processed:\n");
 	mprint ("          -1, -2, -12: Output Field 1 data, Field 2 data, or both\n");
 	mprint ("                       (DEFAULT is -1)\n");
@@ -382,26 +382,26 @@ void print_usage (void)
 	mprint ("Output formats:\n\n");
 	mprint ("                 -out=format\n\n");
 	mprint ("       where format is one of these:\n");
-	mprint ("                      srt     -> SubRip (default, so not actually needed).\n");
-	mprint ("                      ass/ssa -> SubStation Alpha.\n");
-	mprint ("                      webvtt  -> WebVTT format\n");
-	mprint ("                      webvtt-full -> WebVTT format with styling\n");
-	mprint ("                      sami    -> MS Synchronized Accesible Media Interface.\n");
-	mprint ("                      bin     -> CC data in CCExtractor's own binary format.\n");
-	mprint ("                      raw     -> CC data in McPoodle's Broadcast format.\n");
-	mprint ("                      dvdraw  -> CC data in McPoodle's DVD format.\n");
-	mprint ("                      txt     -> Transcript (no time codes, no roll-up\n");
-	mprint ("                                 captions, just the plain transcription.\n");
-	mprint ("                      ttxt    -> Timed Transcript (transcription with time\n");
-	mprint ("                                 info)\n");
-	mprint ("                      smptett -> SMPTE Timed Text (W3C TTML) format.\n");
-	mprint ("                      spupng  -> Set of .xml and .png files for use with\n");
-	mprint ("                                 dvdauthor's spumux.\n");
-	mprint ("                                 See \"Notes on spupng output format\"\n");
-	mprint ("                      null    -> Don't produce any file output\n");
-	mprint ("                      report  -> Prints to stdout information about captions\n");
-	mprint ("                                 in specified input. Don't produce any file\n");
-	mprint ("                                 output\n\n");
+	mprint ("                       srt     -> SubRip (default, so not actually needed).\n");
+	mprint ("                       ass/ssa -> SubStation Alpha.\n");
+	mprint ("                       webvtt  -> WebVTT format\n");
+	mprint ("                       webvtt-full -> WebVTT format with styling\n");
+	mprint ("                       sami    -> MS Synchronized Accesible Media Interface.\n");
+	mprint ("                       bin     -> CC data in CCExtractor's own binary format.\n");
+	mprint ("                       raw     -> CC data in McPoodle's Broadcast format.\n");
+	mprint ("                       dvdraw  -> CC data in McPoodle's DVD format.\n");
+	mprint ("                       txt     -> Transcript (no time codes, no roll-up\n");
+	mprint ("                                  captions, just the plain transcription.\n");
+	mprint ("                       ttxt    -> Timed Transcript (transcription with time\n");
+	mprint ("                                  info)\n");
+	mprint ("                       smptett -> SMPTE Timed Text (W3C TTML) format.\n");
+	mprint ("                       spupng  -> Set of .xml and .png files for use with\n");
+	mprint ("                                  dvdauthor's spumux.\n");
+	mprint ("                                  See \"Notes on spupng output format\"\n");
+	mprint ("                       null    -> Don't produce any file output\n");
+	mprint ("                       report  -> Prints to stdout information about captions\n");
+	mprint ("                                  in specified input. Don't produce any file\n");
+	mprint ("                                  output\n\n");
 
 	mprint ("Options that affect how input files will be processed.\n");
 
@@ -499,9 +499,9 @@ void print_usage (void)
 	mprint ("             -unicode: Encode subtitles in Unicode instead of Latin-1.\n");
 	mprint ("                -utf8: Encode subtitles in UTF-8 (no longer needed.\n");
 	mprint ("                       because UTF-8 is now the default).\n");
-	mprint ("              -latin1: Encode subtitles in Latin-1\n");
+	mprint ("              -latin1: Encode subtitles in Latin-1.\n");
 	mprint ("  -nofc --nofontcolor: For .srt/.sami/.vtt, don't add font color tags.\n");
-	mprint ("  --nohtmlescape: For .srt/.sami/.vtt, don't covert html unsafe character\n");
+	mprint ("       --nohtmlescape: For .srt/.sami/.vtt, don't convert html unsafe character.\n");
 	mprint ("-nots --notypesetting: For .srt/.sami/.vtt, don't add typesetting tags.\n");
 	mprint ("                -trim: Trim lines.\n");
 	mprint ("   -dc --defaultcolor: Select a different default color (instead of\n");
@@ -513,7 +513,7 @@ void print_usage (void)
 	mprint ("                       ALL CAPS in subtitles.\n");
 	mprint ("-sbs --splitbysentence: Split output text so each frame contains a complete\n");
 	mprint ("                       sentence. Timings are adjusted based on number of\n");
-	mprint ("                       characters\n.");
+	mprint ("                       characters.\n");
 	mprint ("  --capfile -caf file: Add the contents of 'file' to the list of words\n");
 	mprint ("                       that must be capitalized. For example, if file\n");
 	mprint ("                       is a plain text file that contains\n\n");
@@ -630,7 +630,7 @@ void print_usage (void)
 	mprint ("  If codec type is not selected then first elementary stream suitable for \n"
 			"  subtitle is selected, please consider -teletext -noteletext override this\n"
 			"  option.\n"
-			"      -codec dvbsub    select the dvb subtitle from all elementary stream,\n"
+			"      -codec dvbsub     select the dvb subtitle from all elementary stream,\n"
 			"                        if stream of dvb subtitle type is not found then \n"
 			"                        nothing is selected and no subtitle is generated\n"
 			"      -nocodec dvbsub   ignore dvb subtitle and follow default behaviour\n"
@@ -693,13 +693,13 @@ void print_usage (void)
 	mprint ("                       file. (Only for TS/ASF files at the moment.)\n");
 	mprint ("            -parsePAT: Print Program Association Table dump.\n");
 	mprint ("            -parsePMT: Print Program Map Table dump.\n");
-	mprint("              -dumpdef: Hex-dump defective TS packets.\n");
+	mprint ("             -dumpdef: Hex-dump defective TS packets.\n");
 	mprint (" -investigate_packets: If no CC packets are detected based on the PMT, try\n");
 	mprint ("                       to find data in all packets by scanning.\n");
 #ifdef ENABLE_SHARING
 	mprint ("       -sharing-debug: Print extracted CC sharing service messages\n");
 #endif //ENABLE_SHARING
-	mprint("\n");
+	mprint ("\n");
 
 
 	mprint ("Teletext related options:\n");
@@ -769,79 +769,79 @@ void print_usage (void)
 	mprint ("won't do anything yet. Feel free to submit samples that cause problems\n");
 	mprint ("and feature requests.\n");
 	mprint ("\n");
-	mprint("Notes on spupng output format:\n");
-	mprint("One .xml file is created per output field. A set of .png files are created in\n");
-	mprint("a directory with the same base name as the corresponding .xml file(s), but with\n");
-	mprint("a .d extension. Each .png file will contain an image representing one caption\n");
-	mprint("and named subNNNN.png, starting with sub0000.png.\n");
-	mprint("For example, the command:\n");
-	mprint("    ccextractor -out=spupng input.mpg\n");
-	mprint("will create the files:\n");
-	mprint("    input.xml\n");
-	mprint("    input.d/sub0000.png\n");
-	mprint("    input.d/sub0001.png\n");
-	mprint("    ...\n");
-	mprint("The command:\n");
-	mprint("    ccextractor -out=spupng -o /tmp/output -12 input.mpg\n");
-	mprint("will create the files:\n");
-	mprint("    /tmp/output_1.xml\n");
-	mprint("    /tmp/output_1.d/sub0000.png\n");
-	mprint("    /tmp/output_1.d/sub0001.png\n");
-	mprint("    ...\n");
-	mprint("    /tmp/output_2.xml\n");
-	mprint("    /tmp/output_2.d/sub0000.png\n");
-	mprint("    /tmp/output_2.d/sub0001.png\n");
-	mprint("    ...\n");
-	mprint("\n");
-	mprint("Burned-in subtitle extraction:\n");
-	mprint("         -hardsubx : Enable the burned-in subtitle extraction subsystem.\n");
-	mprint("\n");
-	mprint("         NOTE: The following options will work only if -hardsubx is \n");
-	mprint("                specified before them:-\n");
-	mprint("\n");
-	mprint("         -ocr_mode : Set the OCR mode to either frame-wise, word-wise\n");
-	mprint("                     or letter wise.\n");
-	mprint("                     e.g. -ocr_mode frame (default), -ocr_mode word, \n");
-	mprint("                     -ocr_mode letter\n");
-	mprint("\n");
-	mprint("         -subcolor : Specify the color of the subtitles\n");
-	mprint("                     Possible values are in the set \n");
-	mprint("                     {white,yellow,green,cyan,blue,magenta,red}.\n");
-	mprint("                     Alternatively, a custom hue value between 1 and 360 \n");
-	mprint("                     may also be specified.\n");
-	mprint("                     e.g. -subcolor white or -subcolor 270 (for violet).\n");
-	mprint("                     Refer to an HSV color chart for values.\n");
-	mprint("\n");
-	mprint(" -min_sub_duration : Specify the minimum duration that a subtitle line \n");
-	mprint("                     must exist on the screen.\n");
-	mprint("                     The value is specified in seconds.\n");
-	mprint("                     A lower value gives better results, but takes more \n");
-	mprint("                     processing time.\n");
-	mprint("                     The recommended value is 0.5 (default).\n");
-	mprint("                     e.g. -min_sub_duration 1.0 (for a duration of 1 second)\n");
-	mprint("\n");
-	mprint("   -detect_italics : Specify whether italics are to be detected from the \n");
-	mprint("                     OCR text.\n");
-	mprint("                     Italic detection automatically enforces the OCR mode \n");
-	mprint("                     to be word-wise");
-	mprint("\n");
-	mprint("      -conf_thresh : Specify the classifier confidence threshold between\n");
-	mprint("                      1 and 100.\n");
-	mprint("                     Try and use a threshold which works for you if you get \n");
-	mprint("                     a lot of garbage text.\n");
-	mprint("                     e.g. -conf_thresh 50\n");
-	mprint("\n");
-	mprint(" -whiteness_thresh : For white subtitles only, specify the luminance \n");
-	mprint("                     threshold between 1 and 100\n");
-	mprint("                     This threshold is content dependent, and adjusting\n");
-	mprint("                     values may give you better results\n");
-	mprint("                     Recommended values are in the range 80 to 100.\n");
-	mprint("                     The default value is 95\n");
-	mprint("\n");
-	mprint("            An example command for burned-in subtitle extraction is as follows:\n");
-	mprint("               ccextractor video.mp4 -hardsubx -subcolor white -detect_italics \n");
-	mprint("                   -whiteness_thresh 90 -conf_thresh 60\n");
-	mprint("\n");
+	mprint ("Notes on spupng output format:\n");
+	mprint ("One .xml file is created per output field. A set of .png files are created in\n");
+	mprint ("a directory with the same base name as the corresponding .xml file(s), but with\n");
+	mprint ("a .d extension. Each .png file will contain an image representing one caption\n");
+	mprint ("and named subNNNN.png, starting with sub0000.png.\n");
+	mprint ("For example, the command:\n");
+	mprint ("    ccextractor -out=spupng input.mpg\n");
+	mprint ("will create the files:\n");
+	mprint ("    input.xml\n");
+	mprint ("    input.d/sub0000.png\n");
+	mprint ("    input.d/sub0001.png\n");
+	mprint ("    ...\n");
+	mprint ("The command:\n");
+	mprint ("    ccextractor -out=spupng -o /tmp/output -12 input.mpg\n");
+	mprint ("will create the files:\n");
+	mprint ("    /tmp/output_1.xml\n");
+	mprint ("    /tmp/output_1.d/sub0000.png\n");
+	mprint ("    /tmp/output_1.d/sub0001.png\n");
+	mprint ("    ...\n");
+	mprint ("    /tmp/output_2.xml\n");
+	mprint ("    /tmp/output_2.d/sub0000.png\n");
+	mprint ("    /tmp/output_2.d/sub0001.png\n");
+	mprint ("    ...\n");
+	mprint ("\n");
+	mprint ("Burned-in subtitle extraction:\n");
+	mprint ("         -hardsubx : Enable the burned-in subtitle extraction subsystem.\n");
+	mprint ("\n");
+	mprint ("         NOTE: The following options will work only if -hardsubx is \n");
+	mprint ("                specified before them:-\n");
+	mprint ("\n");
+	mprint ("         -ocr_mode : Set the OCR mode to either frame-wise, word-wise\n");
+	mprint ("                     or letter wise.\n");
+	mprint ("                     e.g. -ocr_mode frame (default), -ocr_mode word, \n");
+	mprint ("                     -ocr_mode letter\n");
+	mprint ("\n");
+	mprint ("         -subcolor : Specify the color of the subtitles\n");
+	mprint ("                     Possible values are in the set \n");
+	mprint ("                     {white,yellow,green,cyan,blue,magenta,red}.\n");
+	mprint ("                     Alternatively, a custom hue value between 1 and 360 \n");
+	mprint ("                     may also be specified.\n");
+	mprint ("                     e.g. -subcolor white or -subcolor 270 (for violet).\n");
+	mprint ("                     Refer to an HSV color chart for values.\n");
+	mprint ("\n");
+	mprint (" -min_sub_duration : Specify the minimum duration that a subtitle line \n");
+	mprint ("                     must exist on the screen.\n");
+	mprint ("                     The value is specified in seconds.\n");
+	mprint ("                     A lower value gives better results, but takes more \n");
+	mprint ("                     processing time.\n");
+	mprint ("                     The recommended value is 0.5 (default).\n");
+	mprint ("                     e.g. -min_sub_duration 1.0 (for a duration of 1 second)\n");
+	mprint ("\n");
+	mprint ("   -detect_italics : Specify whether italics are to be detected from the \n");
+	mprint ("                     OCR text.\n");
+	mprint ("                     Italic detection automatically enforces the OCR mode \n");
+	mprint ("                     to be word-wise");
+	mprint ("\n");
+	mprint ("      -conf_thresh : Specify the classifier confidence threshold between\n");
+	mprint ("                      1 and 100.\n");
+	mprint ("                     Try and use a threshold which works for you if you get \n");
+	mprint ("                     a lot of garbage text.\n");
+	mprint ("                     e.g. -conf_thresh 50\n");
+	mprint ("\n");
+	mprint (" -whiteness_thresh : For white subtitles only, specify the luminance \n");
+	mprint ("                     threshold between 1 and 100\n");
+	mprint ("                     This threshold is content dependent, and adjusting\n");
+	mprint ("                     values may give you better results\n");
+	mprint ("                     Recommended values are in the range 80 to 100.\n");
+	mprint ("                     The default value is 95\n");
+	mprint ("\n");
+	mprint ("            An example command for burned-in subtitle extraction is as follows:\n");
+	mprint ("               ccextractor video.mp4 -hardsubx -subcolor white -detect_italics \n");
+	mprint ("                   -whiteness_thresh 90 -conf_thresh 60\n");
+	mprint ("\n");
 	mprint ("\n         --version : Display current CCExtractor version and detailed information.\n");
 }
 
@@ -874,11 +874,11 @@ char *calculateSHA256(char *location) {
 
 void version(char *location) {
 	char *hash = calculateSHA256(location);
-	mprint("CCExtractor detailed version info\n");
-	mprint("	Version: %s\n", VERSION);
-	mprint("	Git commit: %s\n", GIT_COMMIT);
-	mprint("	Compilation date: %s\n", COMPILE_DATE);
-	mprint("	File SHA256: %s\n", hash);
+	mprint ("CCExtractor detailed version info\n");
+	mprint ("	Version: %s\n", VERSION);
+	mprint ("	Git commit: %s\n", GIT_COMMIT);
+	mprint ("	Compilation date: %s\n", COMPILE_DATE);
+	mprint ("	File SHA256: %s\n", hash);
 }
 
 void parse_708_services (struct ccx_s_options *opts, char *s)
@@ -1309,7 +1309,7 @@ int parse_parameters (struct ccx_s_options *opt, int argc, char *argv[])
 			}
 			else
 			{
-				mprint("Invalid option for codec %s\n",argv[i]);
+				mprint ("Invalid option for codec %s\n",argv[i]);
 			}
 			continue;
 		}
@@ -1328,7 +1328,7 @@ int parse_parameters (struct ccx_s_options *opt, int argc, char *argv[])
 			}
 			else
 			{
-				mprint("Invalid option for codec %s\n",argv[i]);
+				mprint ("Invalid option for codec %s\n",argv[i]);
 			}
 			continue;
 		}
@@ -2209,9 +2209,9 @@ int parse_parameters (struct ccx_s_options *opt, int argc, char *argv[])
 	
 	if(opt->extract_chapters)
 	{
-		mprint("Request to extract chapters recieved.\n");
-		mprint("Note that this must only be used with MP4 files,\n");
-		mprint("for other files it will simply generate subtitles file.\n\n");
+		mprint ("Request to extract chapters recieved.\n");
+		mprint ("Note that this must only be used with MP4 files,\n");
+		mprint ("for other files it will simply generate subtitles file.\n\n");
 	}
 
 	if(opt->gui_mode_reports)
@@ -2301,7 +2301,7 @@ int parse_parameters (struct ccx_s_options *opt, int argc, char *argv[])
 
 	if (opt->write_format == CCX_OF_WEBVTT && opt->enc_cfg.encoding != CCX_ENC_UTF_8)
 	{
-		mprint("Note: Output format is WebVTT, forcing UTF-8");
+		mprint ("Note: Output format is WebVTT, forcing UTF-8");
 		opt->enc_cfg.encoding = CCX_ENC_UTF_8;
 	}
 #ifdef WITH_LIBCURL
