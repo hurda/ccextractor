@@ -842,7 +842,7 @@ void print_usage (void)
 	mprint ("               ccextractor video.mp4 -hardsubx -subcolor white -detect_italics \n");
 	mprint ("                   -whiteness_thresh 90 -conf_thresh 60\n");
 	mprint ("\n");
-	mprint ("\n         --version : Display current CCExtractor version and detailed information.\n");
+	mprint ("\n       --version : Display current CCExtractor version and detailed information.\n");
 }
 
 unsigned char sha256_buf[16384];
